@@ -15,7 +15,7 @@ export const App: React.FC = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
   const [siteName] = useState<string>('PrimePicks');
   const [affiliateTag, setAffiliateTag] = useState<string>(() => {
-    return localStorage.getItem('primepicks_affiliate_tag') || 'primepicks-20';
+    return localStorage.getItem('primepicks_affiliate_tag') || 'maheshkumarvm-21';
   });
 
   const [favorites, setFavorites] = useState<string[]>(() => {
@@ -114,7 +114,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors">
-      
+
       {/* Navbar */}
       <Navbar
         siteName={siteName}
@@ -137,7 +137,7 @@ export const App: React.FC = () => {
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
-        
+
         {/* Controls Bar: Count & View Switcher */}
         <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-slate-800">
           <div className="text-sm font-semibold text-slate-600 dark:text-slate-400">
@@ -153,22 +153,20 @@ export const App: React.FC = () => {
             <div className="flex items-center bg-slate-200/60 dark:bg-slate-800 rounded-xl p-0.5">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-1.5 rounded-lg transition-colors ${
-                  viewMode === 'grid'
+                className={`p-1.5 rounded-lg transition-colors ${viewMode === 'grid'
                     ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-400 hover:text-slate-600'
-                }`}
+                  }`}
                 title="Grid View"
               >
                 <LayoutGrid className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setViewMode('list')}
-                className={`p-1.5 rounded-lg transition-colors ${
-                  viewMode === 'list'
+                className={`p-1.5 rounded-lg transition-colors ${viewMode === 'list'
                     ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
                     : 'text-slate-400 hover:text-slate-600'
-                }`}
+                  }`}
                 title="List View"
               >
                 <List className="w-4 h-4" />

@@ -22,7 +22,7 @@ export function extractAsin(linkOrAsin: string): string | null {
  */
 export function buildAffiliateUrl(
   urlOrAsin: string,
-  affiliateTag: string = 'primepicks-20'
+  affiliateTag: string = 'maheshkumarvm-21'
 ): string {
   if (!urlOrAsin) return '#';
   const trimmed = urlOrAsin.trim();
